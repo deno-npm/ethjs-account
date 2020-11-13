@@ -15,7 +15,7 @@ Warning: if using with React Native, please use a pre-build distribution (i.e. n
 ## Usage
 
 ```js
-import { generate } from 'https://deno.land/x/npm_ethjs_account@0.1.5/mod.js';
+import { generate } from 'https://deno.land/x/npm_ethjs_account@0.1.6/mod.js';
 
 console.log(generate('892h@fsdf11ks8sk^2h8s8shfs.jk39hsoi@hohskd'));
 

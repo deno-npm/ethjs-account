@@ -6,14 +6,12 @@ https://github.com/ethers-io
 Note, Richard is a god of ether gods. Follow and respect him, and use Ethers.io!
 */
 import {
-  Buffer as BufferModule,
   elliptic,
   sha3 as jssha3,
   randomhex,
 } from "./deps.js";
 import getChecksumAddress from "./src/getChecksumAddress.js";
 
-const { Buffer } = BufferModule;
 const secp256k1 = new (elliptic.ec)("secp256k1");
 
 const sha3 = (str, buffer = false) => {
@@ -116,8 +114,8 @@ function privateToPublic(privateKey) {
     );
   }
 
-  const privateKeyBuffer = new Buffer(stripHexPrefix(privateKey), "hex");
-  return (new Buffer(
+  const privateKeyBuffer = Buffer.from(stripHexPrefix(privateKey), "hex");
+  return (Buffer.from(
     secp256k1.keyFromPrivate(privateKeyBuffer).getPublic(false, "hex"),
     "hex",
   )).slice(1);

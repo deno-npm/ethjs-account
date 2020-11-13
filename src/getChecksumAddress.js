@@ -1,9 +1,6 @@
 import {
-  Buffer as BufferModule,
   sha3,
 } from "../deps.js";
-
-const { Buffer } = BufferModule;
 
 /**
  * Get the checksum address of a address value

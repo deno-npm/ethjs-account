@@ -1,6 +1,5 @@
 import {
   randomBytes,
-  testing,
 } from "./deps.js";
 import {
   sha3,
@@ -11,6 +10,7 @@ import {
   privateToPublic,
   publicToAddress,
 } from "./mod.js";
+import * as testing from "./testing_deps.js";
 // const ethUtil = require('ethereumjs-util');
 //const SandboxedModule = require('sandboxed-module');
 
